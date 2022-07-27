@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Übung Formulare</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <form action="http://www.webserver.de/kontakt.php" method="get">
+
+        <p><label for="vorname"> Vorname: <input type="text" id="vorname" name="Vorname"
+                    placeholder="vorname" /></label></p>
+        <p>Nachname: <input type="text" name="Nachname" placeholder="nachname" /></p>
+        <fieldset>
+            <legend>Geschlechtbestimmung</legend>
+            <label id="geschlecht">Bitte Geschlecht eingeben:</label>
+            <select name="geschlecht">
+                <option value="0">sag ich nicht</option>
+                <option value="m">M&auml;nnlich</option>
+                <option value="w">Weiblich</option>
+            </select>
+            <p>Geburtstag:<input type="date" name="gebdatum" /></p>
+            <p>Lieblingsfarbe:<input type="color" name="lieblingsfarbe" /></p>
+            <p>Anzahl: <input type="range" name="bereich" min="1" max="20" /></p>
+            <p>E-Mail: <input type="email" name="mailAdresse" placeholder="test@test.de" /></p>
+            <p>Bitte Kommentar eingeben: </p>
+            <textarea name="Kommentar" id="kommentar" cols="30" rows="5" placeholder="Also ..."></textarea>
+        </fieldset>
+        <p><input type="submit" value="Daten absenden"></p>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Holy Grail mit Grid</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+
+            min-height: 100vh;
+            grid-template-columns: 150px auto 150px;
+            grid-template-rows: auto 1fr auto;
+
+            grid-template-areas:
+                "header header header"
+                "nav main aside"
+                "footer footer footer";
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        nav {
+            grid-area: nav;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        header,
+        footer {
+            background-color: rgb(131, 202, 255);
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        nav,
+        aside {
+            background-color: rgb(204, 153, 204);
+            padding: 1rem;
+            text-transform: uppercase;
+        }
+
+        main {
+            background-color: rgb(255, 204, 204);
+            padding: 1rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>HEADER</h1>
+    </header>
+    <nav>
+        <h2>MENU</h2>
+        <ul>
+            <li>ITEM 1</li>
+            <li>ITEM 2</li>
+            <li>ITEM 3</li>
+            <li>ITEM 4</li>
+            <li>ITEM 5</li>
+        </ul>
+    </nav>
+    <main>
+        <h2>CONTENT</h2>
+        <span>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel ex alias magnam, suscipit eligendi
+            modi
+            labore ipsam ut odio a dolores totam saepe et laborum ab quisquam, quidem excepturi enim sed nulla
+            fugiat
+            aut molestiae repellat! Excepturi architecto aperiam expedita id. Aliquid nobis obcaecati assumenda
+            ipsam
+            provident doloribus suscipit non quo dolores maiores? Assumenda eligendi consectetur ullam
+            cupiditate,
+            perferendis deserunt fugiat exercitationem fugit temporibus modi ipsam officiis laborum officia
+            consequatur
+            mollitia nisi adipisci placeat. Maiores vel laborum consectetur impedit molestias id nihil rerum,
+            totam
+            officiis ea laudantium repellat, fugit alias sequi tenetur inventore optio eius? Commodi harum
+            optio, a
+            repellendus quas excepturi, sunt quis officiis quod delectus recusandae similique! Sapiente iste
+            laboriosam
+            delectus voluptatum ab recusandae labore id, obcaecati ad nisi vitae deserunt natus provident
+            magnam. Esse
+            officia maxime quidem culpa incidunt quas qui accusantium, quibusdam, ipsam libero dolor recusandae.
+            Tempora
+            facilis iusto reprehenderit est obcaecati, nulla laboriosam ipsam. Voluptatem totam nam illum
+            obcaecati quos
+            eaque animi earum, hic at adipisci error ex sequi quis magni consectetur sed deleniti aperiam dolor
+            voluptas
+            autem? Quos placeat ipsa, quaerat cumque eligendi optio quasi porro ut assumenda voluptate harum,
+            voluptatem
+            vitae repellendus officia rem debitis nisi sapiente maxime nemo, eveniet libero sequi nulla neque.
+            Illum hic
+            amet animi quaerat corporis explicabo dolorem non iste vel fugit! Quasi fugiat pariatur ducimus
+            magnam iste
+        </span>
+    </main>
+    <aside>
+        <article>AD</article>
+        <article>AD</article>
+        <article>AD</article>
+    </aside>
+    <footer>
+        <h1>FOOTER</h1>
+    </footer>
+</body>
+
+</html>

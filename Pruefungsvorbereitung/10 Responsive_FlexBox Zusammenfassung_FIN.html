@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="HolyGrid.css" />
+    <style>
+        /*
+        Breiten in einem fixen Grid berechnen (alles in px) #oldSchool
+
+                                        ContainerBreite bzw. SeitenBreite * gewünschte Breite in "Spalten"
+                Tatsächliche Breite = _____________________________________________________________________  - 2*Außenabstand 
+                                                   SpaltenAnzahl
+
+        --> width: <Tatsächliche Breite> px;
+
+    ----Umbau vom fixen zum fluiden Layout----
+
+        1.) Umrechnen von festen Größen in flexible Größen
+        Wenn gesamtbreite festgelegt ist:
+
+                                Breite (px) * 100
+            Breite (%) =____________________________________
+                                Breite Elternelement (px)
+
+
+
+        2.) Dynamische Größe von Überschriften (optional)
+            ! Für normalen Text nicht geeignet, da der Text nicht mehr gezoomt werden kann.
+        
+            x max=100vh/Anzahl Buchstaben * 1.6 (Faustformel)
+        <h1 style="font-size:13vw;text-align: center;"> Überschrift</h1>
+        
+
+        /*          
+        3.) Bilder flexible gestalten 
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        /*
+
+
+        4.) Einfügen von Media Queries  */
+        
+        @media only screen and (max-width:500px) {
+            /* ... */
+        }
+
+        @media only screen and (min-width:501px) and (max-width:1000px) {
+            /* ... */
+        }
+
+        @media only screen and (min-width: 1001px) {
+            /* ... */
+        }
+
+/*
+        -rem und der 62.5%-Trick- 
+        html {
+            font-size: 62.5%;
+        }
+
+        p {
+            /*für ältere Browser die kein rem kennen 
+            font-size: 14px;
+            /* da Root-Element=62,5% --> 1.4rem = 14px
+            font-size: 1.4rem
+        }
+*/
+
+
+
+    </style>
+    <script>
+    </script>
+</head>
+<!-- HolyGrail -->
+
+<body>
+    <header>header</header>
+    <main>
+        <nav>nav</nav>
+        <article>article</article>
+        <aside>aside</aside>
+    </main>
+    <footer>footer</footer>
+</body>
+
+</html>

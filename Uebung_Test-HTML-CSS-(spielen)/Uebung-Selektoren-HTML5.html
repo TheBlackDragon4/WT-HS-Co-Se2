@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Das ist eine Testseite für CSS - Selektoren</title>
+    <style>
+        h1,
+        h2 {
+            color: blue;
+        }
+
+        .wichtig {
+            color: red;
+        }
+
+        /*Das h1 span geht in diesem Fall nicht, da hier keine Kombination aus h1 span vorhanden ist*/
+        /*Nachkommmen - Selektoren*/
+        h1 span {
+            text-transform: uppercase;
+        }
+
+        p span {
+            text-transform: uppercase;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        header>h1 {
+            text-decoration: underline;
+        }
+
+        main>div {
+            text-align: center;
+        }
+
+        #absatz {
+            color: brown;
+        }
+
+        span {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="wichtig">Eine &Uuml;berschrift</h1>
+    </header>
+    <main>
+        <div>
+            <div id="absatz">
+                Das ist ein div Bereich in dem alle beabsichtigten Informationen niedergeschrieben werden können.
+            </div>
+            <br/>
+            <diV>
+                Hallo hier soll ein Absatz hineingeschrieben werden.
+                Das ist eine <span>zweite Zeile von Inhalt</span> innerhalb dieser Seite
+            </diV>
+
+        </div>
+    </main>
+
+    <header>
+        <h1 class="wichtig">Eine <span>&Uuml;berschrift</span></h1>
+    </header>
+
+</body>
+
+</html>

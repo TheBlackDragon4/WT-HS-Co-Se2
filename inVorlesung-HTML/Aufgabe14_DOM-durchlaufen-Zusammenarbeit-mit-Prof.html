@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DOM Übung</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script>
+        // Zwischenspeicher für spätere Anzeige im Browser
+        let anzeige = "";
+
+        let p = document.createElement("p")
+
+        // Startpunkt -> Zentrale Schnittstelle für weitere Bearbeitung
+        function start() {
+            // Ruft domDurchlauf mit document.body auf -> Rekursionsstart mit Anfangsnode als Parameter
+            domDurchlauf(document.body);
+
+            // Absatz erzeugen, Übergabe Objektreferenz an Variable child 
+            let child = document.createElement("p");
+
+            // Text in das Element schreiben, sodass es im Browser angezeigt werden kann
+            child.innerHTML = anzeige;
+
+            // Element ins DOM einfügen
+            document.body.appendChild(child);
+            //document.body.appendChild(p);
+        }
+
+        /* Rekursive Funktion zum Durchlauf der Nachfahren des übergebenen Knotens*/
+        function domDurchlauf(currNode, indentation = "") {
+
+            if (!is_ignorable(currNode)) {
+                // Auslesen der Hauptinformationden zum Knoten (Typ, Name, Value, Attribute)
+                extractData(currNode, indentation);
+            }
+
+            // Erzeugung einer Liste aller Kinder
+            // *.childNodes gibt alle Kindknoten aus
+            let childList = currNode.childNodes;
+
+            // Durchlauf der Liste
+            // Verständnis wie bei Java die for(String element : elementliste) {...} zu sehen
+            for (let child of childList) {
+                // Rekursiver Aufruf mit Kin als aktuellen Knoten
+                domDurchlauf(child, indentation + "&nbsp;&nbsp;&nbsp;&nbsp;");
+            }
+
+        }
+
+        // Auslesen der Hauptinformationden zum Knoten (Typ, Name, Value, Attribute)
+        function extractData(currNode, indentation) {
+
+            // Speichern der Information in den AnzeigeString
+            anzeige += indentation + "&#9492;&#9472" + "Type: " + convertTypetoString(currNode.nodeType) +
+                " Name: " + currNode.nodeName + " Value: " + currNode.nodeValue + "<br/>";
+
+            // let text = document.createTextNode(indentation + "&#9492;&#9472" + "Type: " + convertTypetoString(currNode.nodeType) +
+            //     " Name: " + currNode.nodeName + " Value: " + currNode.nodeValue);
+
+            // p.appendChild(text);
+            // let br = document.createElement("br");
+            // p.appendChild(br);
+
+            extractAttributes(currNode, indentation + "&nbsp;&nbsp;&nbsp;&nbsp;");
+        }
+
+        function extractAttributes(currNode, indentation) {
+            // Auslesen der Informationen der Attribute
+            if (currNode.hasAttribute) {
+                for (let attribute of currNode.attributes) {
+                    anzeige += indentation + "&#9492;&#9472" + attribute.nodeName + " " + attribute.value + "<br/>";
+
+                    // let text = document.createTextNode(indentation + "&#9492;&#9472" + "Type: " + convertTypetoString(currNode.nodeType) +
+                    //     " Name: " + currNode.nodeName + " Value: " + currNode.nodeValue);
+                    // p.appendChild(text);
+                    // let br = document.createElement("br");
+                    // p.appendChild(br);
+                }
+            }
+        }
+
+        function convertTypetoString(type) {
+            switch (type) {
+                case 1:
+                    return "Element_Node";
+                case 2:
+                    return "Attribute_Node";
+                case 3:
+                    return "Text_Node";
+            }
+        }
+
+        // Pruefung, ob Knoten nur Whitespace (ws) beinhaltet
+        function is_all_ws(nod) {
+            // Use ECMA-262 Edition 3 String and RegExp features
+            return !(/[^\t\n\r ]/.test(nod.textContent));
+        }
+
+        // Hier wird festgelegt, unter welchen Bedingungen ein
+        // Knoten nicht beachtet werden soll
+        function is_ignorable(nod) {
+            return (nod.nodeType == 8) || // Kommentar-Knoten
+                (nod.nodeName == "SCRIPT") || // Skript-Knoten
+                ((nod.nodeType == 3) && is_all_ws(nod)); // Text-Knoten, alles ws
+        }
+
+        window.onload = start;
+    </script>
+</head>
+
+<body>
+
+    <div id="einDiv">
+        <div class="wichtig"><span>SPAN im div</span> </div> Ein div-Element
+    </div>
+    <p>Ein Absatz</p>
+    <h1 id="U1" class="wichtig">Eine Überschrift mit id- und class-Attribut</h1>
+    <!-- Unter dieser Zeile wird der DOM-Baum angezeigt -->
+
+</body>
+
+</html>

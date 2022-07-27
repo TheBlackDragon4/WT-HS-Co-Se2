@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Test JS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <style>
+        table,
+        td {
+            text-align: center;
+            border: 1px solid red;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Ausgabe der ersten Zeile</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>Ausgabe der zweiten zeile</td>
+            <td>B</td>
+        </tr>
+    </table>
+
+    <script>
+        let t = document.querySelector('table');
+        let ref = document.querySelector('tr');
+
+        // ausgabeKnoten();
+        ausgabeElement();
+        // ausgabeKnoten();
+        // ausgabeElement();
+
+        function ausgabeKnoten() {
+
+            console.log("( Type: " + ref.firstChild.nodeType +
+                " Name: " + ref.firstChild.nodeName +
+                " Value: " + ref.firstChild.nodeValue + " )");
+        }
+
+        function ausgabeElement() {
+
+            let textNode = ref.firstElementChild.innerHTML;
+            console.log("( Type: " + ref.firstElementChild.nodeType +
+                " Name: " + ref.firstElementChild.nodeName +
+                " Value: " + ref.firstElementChild.nodeValue +
+                " Text: " + ref.firstElementChild.innerHTML +
+                " Zwilling: " + ref.firstElementChild.nextElementSibling.innerHTML + " )");
+        }
+
+    </script>
+</body>
+
+</html>

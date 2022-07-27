@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="myCSS.css" type="text/CSS">
+    <style>
+        /* Internal - Stylesheet */
+        p {
+            /* 1 */
+            color: greenyellow;
+        }
+
+        body {
+            /* 1 */
+            color: pink;
+        }
+
+        a:link {
+            /* 11 */
+            color: blue;
+        }
+
+        .old {
+            /* 10 */
+            color: brown;
+        }
+
+        #menue a.old {
+            /* 111 */
+            color: green;
+        }
+
+        li a {
+            /* 2 */
+            color: blue;
+        }
+
+        #menue li a {
+            /* 102 */
+            color: red;
+        }
+
+    </style>
+</head>
+
+<body>
+    <p class="gg">p one</p>
+    <p class="test">p two</p>
+    <p>p three</p>
+    <p class="gg" style="color: orange;">p four</p> <!-- Inline - Sylesheet 1000 -->
+
+    <hr />
+
+    <ul id="menue">
+        <li>Menupunkt 1
+            <a href="" class="old" style="color:orange">Datei neu ...</a> <!-- 1000 -->
+        </li>
+    </ul>
+
+</body>
+
+</html>

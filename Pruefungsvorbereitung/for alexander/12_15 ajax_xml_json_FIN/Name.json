@@ -1,0 +1,40 @@
+{
+    "Btl104": [
+        {
+            "Companies": [
+                {
+                    "CompanyNo": "1",
+                    "BlockNo": "11",
+                    "Squads": [
+                        {
+                            "Type": "Inf",
+                            "Name": "A",
+                            "Force": "100%"
+                        },
+                        {
+                            "Type": "Inf",
+                            "Name": "B",
+                            "Force": "80%"
+                        }
+                    ] 
+                },
+                {
+                    "CompanyNo": "2",
+                    "BlockNo": "12",
+                    "Squads": [
+                        {
+                            "Type": "Pz",
+                            "Name": "A",
+                            "Force": "75%"
+                        },
+                        {
+                            "Type": "Pz",
+                            "Name": "B",
+                            "Force": "100%"
+                        }
+                    ]                   
+                }                
+            ]
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Boxmodell Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0px;
+            width: 510px;
+            margin-top: 15px;
+            margin-left: 5px;
+        }
+
+        #main {
+            background-color: lightgray;
+            border-top-style: dotted;
+            border-radius: 50px;
+            text-align: center;
+            height: 100px;
+            float: left;
+            width: 80%;
+        }
+
+        #aside {
+            background-color: lightgreen;
+            border: 5px solid black;
+
+            float: right;
+            height: 100px;
+            padding: 10px;
+            width: 20%;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main">
+        Hauptbereich
+    </div>
+    <div id="aside">
+        This document specifies level 1 of the Cascading Style Sheet mechanism (CSS1). CSS1 is a simple style sheet
+        mechanism that allows authors and readers to attach style (e.g. fonts, colors and spacing) to HTML
+        documents.
+        The CSS1 language is human readable and writable, and expresses style in common desktop publishing
+        terminology ...
+    </div>
+
+
+</body>
+
+</html>

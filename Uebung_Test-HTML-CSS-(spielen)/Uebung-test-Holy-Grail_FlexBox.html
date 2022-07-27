@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Flex Box Holey Gray</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            /* Zeit vertikale Flexanordnung*/
+            min-height: 100vh;
+            /*100 % vertikale Hoehe*/
+            background-color: aqua;
+        }
+
+        header {
+            flex: 0 0 50px;
+            background-color: blanchedalmond;
+        }
+
+        .mainContainer {
+            display: flex;
+            /* zweiter Container soll horizontal angeordnet sein*/
+            flex-direction: row;
+            flex: 1 1 auto;
+        }
+
+        main {
+            flex: 1 1 auto;
+            background-color: darkkhaki;
+        }
+
+        nav,
+        aside {
+            flex: 0 0 100px;
+            background-color: cornflowerblue;
+        }
+
+        footer {
+            flex: 0 0 10vh;
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+
+<body class="wrapper">
+    <header>
+        Das ist ein Header
+    </header>
+    <div class="mainContainer">
+        <nav>
+            Das ist das Menu
+        </nav>
+        <main>
+            Das ist der Inhalt
+        </main>
+        <aside>
+            Das ist die Sidebar rechts
+        </aside>
+    </div>
+    <footer>
+        Das ist der Footer
+    </footer>
+</body>
+
+</html>

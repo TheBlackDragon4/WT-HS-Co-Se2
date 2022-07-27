@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DOM Tests</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <h1 id="Hallo">
+        Hallo, ich bin eine überschrift der Ebene 1
+    </h1>
+
+    <p class="absatz">
+        Ich bin ein Absatz;
+    </p>
+
+    <p id="absatzID">
+        Ich bin ein Absatz;
+    </p>
+
+    <p onclick="this.style.backgroundColor = 'lightgreen' ; this.style.fontwidth = 'bold'; ">Klick mich!</p>
+
+    <p id="Modifikation">Klick mich!</p>
+
+
+    <script>
+
+        document.getElementById("Modifikation").onclick = function()
+        { this.style.backgroundColor = "yellow"; }
+
+        // function test() {
+        //     let bodyElement = document.body;
+
+        //     let test = document.getElementById("Hallo").nodeType;
+        //     let test1 = document.getElementById("Hallo").ATTRIBUTE_NODE;
+        //     let test2 = document.getElementById("Hallo").TEXT_NODE;
+        //     let test3 = document.getElementById("Hallo").COMMENT_NODE;
+        //     let test4 = document.getElementById("Hallo").DOCUMENT_NODE;
+
+        //     console.log(test);
+        //     console.log(test1);
+        //     console.log(test2);
+        //     console.log(test3);
+        //     console.log(test4);
+
+        //     let testElementCreate = document.createElement('p');
+        //     let testTextCreate = document.createTextNode('Hallo ich stehe in einem Absatz');
+        //     testElementCreate.appendChild(testElementCreate);
+        //     bodyElement.appendChild(testElementCreate);
+
+        // }
+
+        // function test1() {
+        //     let elementNameTest = document.getElementById("Hallo").nodeName;
+        //     let elementNameTest1 = document.getElementById("Hallo").nodeValue
+        //     document.getElementById("Hallo").innerHTML = elementNameTest;
+        //     console.log(elementNameTest1);
+        //     documennt.getElementById("Hallo").innerHTML = elementNameTest1;
+        // }
+
+
+        // let myElement = document.getElementById("Hallo");
+        // let myTagName = myElement.getElementsByTagName("h1");
+
+        // document.getElementById("Hallo").innerHTML = "Hallo wie geht es dir?" + myElement.innerHTML;
+
+        // // DOM - Manipulierung des p - Elements mit ID absatzID
+        // let pElementObject = document.getElementById("absatzID");
+        // pElementObject.firstChild.nodeValue = "Text des H1 - Elements wurde manipuliert";
+        // // pElementObject.innerHTML = "Text des H1 - Elements wurde manipuliert";
+
+    </script>
+
+</body>
+
+
+</html>

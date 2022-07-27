@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Listenelemente hinzufügen</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <ul id="meineListe">
+        <li>Das sind alte Listenelemente</li>
+        <li>Das sind alte Listenelemente</li>
+    </ul>
+
+    <input type="button" onclick=init() value="element hinzufügen" /> <!-- Ruft Funktion "init()" auf -->
+    <button onclick="init()">element hinzufügen</button>
+
+    <script>
+        function init() {
+            let liste = document.getElementById("meineListe"); // Referenz auf ID
+            let neu = document.createElement("li"); // Referenz auf HTML Element
+            neu.innerHTML = "neues Listenelement"; // Erzeigt neuen Elementinhalt
+            neu.style.color = "red";
+            
+            liste.append(neu); // Erzeug das neue Listenelement
+            
+            // neu.appendChild("neues Listenelement");
+        }
+    </script>
+</body>
+
+</html>

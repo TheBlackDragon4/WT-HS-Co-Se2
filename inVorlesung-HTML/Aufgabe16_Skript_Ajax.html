@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ajax Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>Text mit Ajax ändern</h1>
+    <p id="neuesElement"></p>
+
+    <button type="button" onclick="clickVonGO()">GO</button>
+
+    <script>
+
+        function clickVonGO() {
+
+            let myRequest = new XMLHttpRequest();
+
+            myRequest.onload = function () {
+                document.getElementById("neuesElement").innerHTML = this.responseText;
+            }
+            myRequest.open("GET", "datei.txt", true);
+            myRequest.send();
+        }
+
+        // myRequest.onreadystatechange = function () {
+        //     // Antwort ok? 
+        //     if (myRequest.readyState == 4 && myRequest.status == 200) {
+        //         document.getElementById("myh1").innerHTML = myRequest.responseText; // Antwort-Text in aktuelle…
+        //         // …HTML-Seite einbauen
+        //     } // HTTP-Response-Body steht in Textform in Eigenschaft…
+        // }
+        // myRequest.send();
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+ Hallo, ich bin ein Text aus der Datei "datei.txt" die mithilfe von Ajax aufgerufen wurde

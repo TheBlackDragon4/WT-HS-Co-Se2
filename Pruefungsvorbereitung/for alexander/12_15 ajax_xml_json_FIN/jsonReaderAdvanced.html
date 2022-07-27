@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <title></title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="stylesheet" type="text/css" href="HolyGrid.css" /> -->
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0px;
+      padding: 0px 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="altesElement">&Uuml;bersicht Bestellung anzeigen</h1>
+  <button type="button" onclick="butclicked()">Go!</button>
+
+  <script>
+
+    // let bestellungen = document.createElement("div");
+    let newElement;
+    let bestellungen;
+    let childrenJ;
+    let txt = "";
+    function butclicked()
+    {
+      newElement = document.createElement("p");
+
+      let anotherRequest = new XMLHttpRequest();
+      anotherRequest.onload = function ()
+      {
+        if (this.status == 200)
+        {
+          bestellungen = this.responseText;
+          inJSON();
+        }
+      }
+      anotherRequest.open("GET", "Name.json", true);
+      anotherRequest.send();
+    }
+
+    function inJSON()
+    {
+      const objectJ = JSON.parse(bestellungen);
+      childrenJ = objectJ.Btl104[0]["Companies"];
+      for (let i = 0; i < childrenJ.length; i++)
+      {
+        txt += "CompanyNo: " + childrenJ[i].CompanyNo + "<br/>";
+        txt += "BlockNo: " + childrenJ[i].BlockNo + "<br/>";
+        let grandchildrenJ = objectJ.Btl104[0]["Companies"][i]["Squads"];
+        txt += "Squads:<br/>";
+        for (let m = 0; m < grandchildrenJ.length; m++)
+        {
+          txt += "<ul>"
+          txt += "<li>Type: " + grandchildrenJ[m].Type + "</li>";
+          txt += "<li>Name: " + grandchildrenJ[m].Name + "</li>";
+          txt += "<li>Force: " + grandchildrenJ[m].Force + "</li>";
+          txt += "</ul><br/>";
+        }
+      }
+
+      newElement.innerHTML = txt;
+      document.querySelector("h1").appendChild(newElement);
+      console.log("bka");
+    }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Flexible Gestaltung</title>
+    <style>
+        html {
+            font-size: 20pt;
+            background-color: gainsboro;
+        }
+
+        hr {
+            background-color: grey;
+            height: 10px;
+            border: 2px solid black;
+        }
+
+        div#first {
+            background-color: red;
+            padding: 5px;
+        }
+
+        div#second {
+            background-color: red;
+            padding: 5px;
+        }
+
+        div#third {
+            background-color: green;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="font-size: 80%">
+        Beispiel in 80 %
+        <div style="font-size: 40%">
+            Beispiel in 40 %
+            <div style="font-size: 20%">
+                Beispiel in 20 %
+            </div>
+        </div>
+    </div>
+
+    <div style="font-size: 8em">
+        Beispiel in 80 %
+        <div style="font-size: 8em">
+            Beispiel in 40 %
+            <div style="font-size: 8em">
+                Beispiel in 20 %
+            </div>
+        </div>
+    </div>
+
+    <div style="font-size: 8rem">
+        Beispiel in 80 %
+        <div style="font-size: 8rem">
+            Beispiel in 40 %
+            <div style="font-size: 8rem">
+                Beispiel in 20 %
+            </div>
+        </div>
+    </div>
+
+    <h1>Variante 1 - % (flexible, aber problembehaftet)</h1>
+    <p>In dieser Zeile sieht man die Original Font-Size</p>
+    <div id="first" style="font-size: 80%;">
+        <p>Hier wird es</p>
+        <div style="font-size: 80%;">
+            <p>leider immer</p>
+            <div style="font-size: 80%;">
+                <p>kleiner und kleiner</p>
+            </div>
+        </div>
+    </div>
+    <hr />
+
+    <h1>Variante 2 - em (flexible, aber problembehaftet)</h1>
+    <p>In dieser Zeile sieht man die Original Font-Size</p>
+    <div id="second" style="font-size: 8em;">
+        <p>Hier wird es</p>
+        <div style="font-size: 8em;">
+            <p>leider immer</p>
+            <div style="font-size: 8em;">
+                <p>kleiner und kleiner</p>
+            </div>
+        </div>
+    </div>
+    <hr />
+
+    <h1>Variante 3 - rem (das ist jetzt toll!!!)</h1>
+    <p>In dieser Zeile sieht man die Original Font-Size</p>
+    <div id="third" style="font-size: 8rem;">
+        <p>Hier wird es</p>
+        <div style="font-size: 8rem;">
+            <p>leider immer</p>
+            <div style="font-size: 8rem;">
+                <p>kleiner und kleiner</p>
+            </div>
+        </div>
+    </div>
+    <hr />
+</body>
+
+</html>

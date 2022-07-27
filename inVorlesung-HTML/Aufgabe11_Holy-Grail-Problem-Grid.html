@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Grail</title>
+    <style>
+        /* Das hier ist alles uninteressant, bitte scroll runter bis zum nächsten Kommentar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-transform: uppercase;
+        }
+
+        header,
+        footer {
+            background-color: rgb(131, 202, 255);
+            text-transform: uppercase;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        nav,
+        aside {
+            background-color: rgb(204, 153, 204);
+            text-transform: uppercase;
+            padding: 1rem;
+        }
+
+        main {
+            background-color: rgb(255, 204, 204);
+            padding: 1rem;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        /* Ab hier wird Interessant und wichtig */
+        body {
+            /*vh Zeigt Prozentualen Wert der gesamten Seite an*/
+            min-height: 100vh;
+            display: grid;
+            /* 
+				Hier definieren wir die Abschnitte unserer Seite, die Namen in grid-template-areas können frei gewählt werden
+				Semantisch ist es halt sinnvoll auch header, nav, main und co zu nutzen.
+				header und footer sind über die komplette Zeile verteilt, also müssen wir auch entsprechend "header header header" schreiben 
+			*/
+            grid-template-areas:
+                "header header header"
+                "nav main aside"
+                "footer footer footer";
+
+            /* auto 1fr auto bedeutet die erste und letzte Zeile nehmen sich so viel Platz wie Sie brauchen, die mittlere, sprich wo sich nav, main und aside befinden, nehmen ein 1fr, ist so ähnlich wie bei flex-grow: 1 */
+            grid-template-rows: auto 1fr auto;
+
+            /* bei den Spalten könnte man theoretisch auch einfach auto 1fr auto machen, allerdings wären dann nav und aside unterschiedlich groß */
+            grid-template-columns: 150px 1fr 150px;
+        }
+
+        /* Man beachte das div mit der id container wird hier nicht mehr gebraucht wie im anderen beispiel */
+
+        header {
+            /* Hier unbedingt den namen nutzen, den man in grid-template-areas definiert hat! */
+            grid-area: header;
+        }
+
+        nav {
+            /* Hier unbedingt den namen nutzen, den man in grid-template-areas definiert hat! */
+            grid-area: nav;
+        }
+
+        main {
+            /* Hier unbedingt den namen nutzen, den man in grid-template-areas definiert hat! */
+            grid-area: main;
+        }
+
+        aside {
+            /* Hier unbedingt den namen nutzen, den man in grid-template-areas definiert hat! */
+            grid-area: aside;
+        }
+
+        footer {
+            /* Hier unbedingt den namen nutzen, den man in grid-template-areas definiert hat! */
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>header</h1>
+    </header>
+    <div id="container"></div>
+    <nav>
+        <h2>Menu</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 6</li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Content</h2>
+        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel ex alias magnam, suscipit eligendi modi
+            labore ipsam ut odio a dolores totam saepe et laborum ab quisquam, quidem excepturi enim sed nulla fugiat
+            aut molestiae repellat! Excepturi architecto aperiam expedita id. Aliquid nobis obcaecati assumenda ipsam
+            provident doloribus suscipit non quo dolores maiores? Assumenda eligendi consectetur ullam cupiditate,
+            perferendis deserunt fugiat exercitationem fugit temporibus modi ipsam officiis laborum officia consequatur
+            mollitia nisi adipisci placeat. Maiores vel laborum consectetur impedit molestias id nihil rerum, totam
+            officiis ea laudantium repellat, fugit alias sequi tenetur inventore optio eius? Commodi harum optio, a
+            repellendus quas excepturi, sunt quis officiis quod delectus recusandae similique! Sapiente iste laboriosam
+            delectus voluptatum ab recusandae labore id, obcaecati ad nisi vitae deserunt natus provident magnam. Esse
+            officia maxime quidem culpa incidunt quas qui accusantium, quibusdam, ipsam libero dolor recusandae. Tempora
+            facilis iusto reprehenderit est obcaecati, nulla laboriosam ipsam. Voluptatem totam nam illum obcaecati quos
+            eaque animi earum, hic at adipisci error ex sequi quis magni consectetur sed deleniti aperiam dolor voluptas
+            autem? Quos placeat ipsa, quaerat cumque eligendi optio quasi porro ut assumenda voluptate harum, voluptatem
+            vitae repellendus officia rem debitis nisi sapiente maxime nemo, eveniet libero sequi nulla neque. Illum hic
+            amet animi quaerat corporis explicabo dolorem non iste vel fugit! Quasi fugiat pariatur ducimus magnam iste
+            numquam delectus, doloribus, laboriosam corporis aliquam, excepturi atque saepe eaque similique architecto
+            rerum nostrum repellat. Iste consectetur ipsam cumque repellendus qui dicta vero unde officia ea asperiores
+            debitis delectus facere, nam modi aliquam iusto. Aliquid minima eaque magni eveniet molestiae cupiditate
+            voluptatem dignissimos neque corrupti quod expedita, quo cum, id illo iste quis quibusdam sed deleniti
+            officiis laudantium explicabo. Voluptas amet eaque porro ut sequi reprehenderit vel quia exercitationem
+            ullam omnis alias, deserunt a officia reiciendis ipsum voluptatibus consequuntur labore eius rerum fugit,
+            consectetur vitae cum itaque. Ullam cupiditate laborum obcaecati repellat hic totam? Molestiae veniam
+            reprehenderit voluptate odio accusamus tempora recusandae fuga est quam delectus autem mollitia,
+            necessitatibus nam unde quas laboriosam voluptates eaque corporis dolore! Omnis illo consequuntur iste
+            doloremque autem quisquam esse, tenetur quis a ratione laborum perferendis deserunt aperiam numquam tempore
+            quos, fugit voluptate cumque? Cupiditate nisi libero nulla, soluta officiis repellat nemo tenetur enim ex
+            optio possimus neque ipsa sint facilis dicta ratione quas quis vel quod, fugit accusantium eos repudiandae?
+            Iure ipsum a at porro. Officia sint beatae laboriosam consectetur sequi nostrum molestias, aut adipisci
+            itaque temporibus laborum, aliquam, ipsam quod reprehenderit exercitationem debitis iste at quo totam rerum?
+            Harum doloremque amet beatae. Nisi nobis qui voluptate, beatae fuga animi rem. Aspernatur ducimus
+            repellendus maiores saepe fugiat et explicabo obcaecati nostrum. Pariatur dolorem, eaque itaque sit
+            reiciendis molestiae odio temporibus illum magnam. Maiores tempore itaque iure numquam recusandae earum
+            veniam labore porro fugit expedita harum, eligendi eaque dolore repellat ea culpa quasi vero tenetur. Quasi
+            accusamus praesentium doloribus eum nulla sunt. Consequatur odit molestiae aliquid alias expedita,
+            accusantium repudiandae pariatur reiciendis id corporis non soluta tempore eveniet suscipit dolorum eligendi
+            accusamus qui iste blanditiis facilis.</span>
+    </main>
+    <aside>
+        <article>ad</article>
+        <article>ad</article>
+        <article>ad</article>
+    </aside>
+    <footer>
+        <h1>footer</h1>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DOM durchlauf</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="einDiv">Ein div-Element</div>
+    <p>Ein Absatz</p>
+    <h1 id="U1" class="wichtig">Eine Überschrift mit id- und class-Attribut</h1>
+    <!-- Unter dieser Zeile wird der DOM-Baum angezeigt -->
+
+    <p id="Verzeichnisbaum"></p>
+
+
+
+    <script>
+        var myElement = document.querySelector("div");
+        // var myElement1 = document.getElementById("einDiv");
+
+        function elementeVonObjekte() {
+            var myknotname = myElement.nodeName;
+            var myknottyp = myElement.nodeType;
+            var myknotwert = myElement.nodeValue;
+            // var myknotname = document.getElementById("einDiv").nodeName;
+            // var myknottyp = document.getElementById("einDiv").nodeType;
+            // var myknotwert = document.getElementById("einDiv").nodeValue;
+            
+            if (myknottyp == 1) {
+                myknottyp = "ELEMENT_NODE";
+            }
+
+            return myknotname + " (" + myknottyp + "): " + myknotwert;
+        }
+
+        function attributIDs() {
+            return "\nAttr id = " + myElement.nodeName;
+        }
+
+        // document.getElementById("Verzeichnisbaum").innerHTML = name;
+
+        function verzeichnisbaum() {
+            var resultElementVonObjekten = elementeVonObjekte();
+            var resultAttributVonObjekt = attributIDs();
+
+            var myString = resultElementVonObjekten + "<br/> <tab id=t3" + resultAttributVonObjekt;
+
+            document.getElementById("Verzeichnisbaum").innerHTML = myString;
+
+
+            console.log(resultElementVonObjekten);
+
+        }
+
+        verzeichnisbaum();
+
+    </script>
+</body>
+
+</html>

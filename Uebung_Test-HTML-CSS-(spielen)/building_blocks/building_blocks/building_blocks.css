@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: beige;
+}
+
+#main_container {
+    width: 600px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #ffffff;
+    overflow: hidden;
+    /* Wird nicht vererbt
+    sonst wird es nicht angezeigt */
+    /* Dadurch wird der main_container angewiesen, sich genauer anzusehen, was sich in ihm befindet. 
+    Er wird die float Elemente erkennen und sich wieder öffnen, um sie aufzunehmen. */
+}
+
+.border {
+    border: 10px solid #666666;
+    border-radius: 15px;
+    width: 100px;
+    height: 100px;
+}
+
+h2 {
+    font-size: 80px;
+    font-family: verdana;
+    text-transform: uppercase;
+    text-align: center;
+    color: #666666;
+}
+
+#a {
+    border-color: yellow;
+    /* "vorherige float Eigenschaft / Umgebung wird aufgehoben" */
+    clear: left;
+
+    /* 
+    "nehm dir keinen automatischen absatz" 
+    "nehm nicht die ganze Breite"
+    "geht eine Ebene hoch (Overflow)"
+    "--> gebe deinen Platz frei"
+    "geh nach rechts bis an die rechte Grenze des Elternelements oder bis zum nächsten gefloateten Element"
+
+    -breite angeben-
+    */
+    /* float: right; */
+
+    /* 
+    "nehm dir keinen automatischen absatz" 
+    "nehm nicht die ganze Breite"
+    "geht eine Ebene hoch (Overflow)"
+    "--> gebe deinen Platz frei"
+    */
+    float: left;
+    /* das Blockelement bleibt ein Blockelement, 
+    nicht aber nur noch die breite, die sie braucht*/
+    margin-left: 40%;
+}
+
+#b {
+    border-color: green;
+    /* gehe float Element aus dem Weg,
+    verlasse die "Floatumgebung des vorherigen Elements */
+    clear: left;
+    float: left;
+    margin-left: 30%;
+}
+
+#c {
+    border-color: blue;
+    /* super wichtig 
+    hidden --> Verhindert das sich die Werte überlagern*/
+    /* overflow: hidden; */
+    /* clear: left; */
+    float: left;
+}
+
+#d {
+    border-color: violet;
+    clear: left;
+    float: left;
+    margin-left: 20%;
+}
+
+#e {
+    border-color: red;
+    /* clear: left; */
+    float: left;
+}
+
+#f {
+    border-color: orange;
+    /* clear: left; */
+    float: left;
+}

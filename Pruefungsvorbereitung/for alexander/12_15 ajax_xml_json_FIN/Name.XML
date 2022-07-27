@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Btl104>
+  <Company CompanyNo="1" BlockNo="11">
+    <Squad Type="Inf">
+      <Name>A</Name>
+      <Force>100%</Force>
+    </Squad>
+    <Squad Type="Inf">
+      <Name>B</Name>
+      <Force>80%</Force>
+    </Squad>
+  </Company>
+  <Company CompanyNo="2" BlockNo="12">
+    <Squad Type="Pz">
+      <Name>A</Name>
+      <Force>75%</Force>
+    </Squad>
+    <Squad Type="Pz">
+      <Name>B</Name>
+      <Force>100%</Force>
+    </Squad>
+  </Company>
+</Btl104>

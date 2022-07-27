@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <title></title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="stylesheet" type="text/css" href="HolyGrid.css" /> -->
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0px;
+      padding: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="altesElement">&Uuml;bersicht Bestellung anzeigen</h1>
+  <button type="button" onclick="ButGoClicked()">Go!</button>
+
+  <script>
+
+    // let bestellungen = document.createElement("div");
+    let newElement;
+    let bestellungen;
+    let jsonChildren;
+    let txt = "";
+    function ButGoClicked()
+    {
+      newElement = document.createElement("p");
+
+      let anotherRequest = new XMLHttpRequest();
+      anotherRequest.onload = function ()
+      {
+        if (this.status == 200)
+        {
+          // document.getElementById("altesElement").innerHTML = this.responseText;
+          bestellungen = this.responseText;
+          inXML();
+        }
+      }
+      anotherRequest.open("GET", "test.json", true);
+      anotherRequest.send();
+
+    }
+
+    function inXML()
+    {
+      const objectJ = JSON.parse(bestellungen);
+      // console.log(objectJ.Firma);
+      jsonChildren = objectJ.Firma[0] ["employees"];
+      // console.log(jsonChildren[0].employees);
+      for (let i = 0; i < jsonChildren.length; i++)
+      {
+        // for (let l = 0; l < xmlChildren[i].; l++)
+        // {
+        //   txt += xmlChildren[i].attributes[l].localName + " " + xmlChildren[i].attributes[l].nodeValue + " ";
+        // }
+        txt += "Vorname: " + jsonChildren[i] .firstName + "<br/>";
+        txt += "Nachnane: " + jsonChildren[i] .lastName + "<br/>";
+        txt += "<br/>";
+        // txt += "Bestellung " + xmlChildren[i].getAttribute("PurchaseOrderNumber");
+        // txt += " vom " + xmlChildren[i].getAttribute("OrderDate") + "<br/>";
+      }
+      newElement.innerHTML = txt;
+      document.querySelector("h1").appendChild(newElement);
+      console.log("bka");
+
+    }
+
+  </script>
+</body>
+
+</html>

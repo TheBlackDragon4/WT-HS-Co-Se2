@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Java Script Tests und auseinandersetzen</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        h1 {
+            cursor: pointer;
+        }
+
+        .a1 {
+            color: aqua;
+        }
+
+        .b2 {
+            color: red;
+        }
+
+        .c3 {
+            color: cadetblue;
+        }
+    </style>
+
+    <script>
+        // geht nicht da das DOM vorher ausgeführt wird
+        // document.getElementById("1").innerHTML = "Hallo!";
+
+        // kann ausgeführt werden, da hier der Befehl erst ausgewählt wird, wenn das DOM geladen wurde
+        // window.onload = init;
+        // function init() {
+        //     document.getElementById("1").innerHTML = "Hallo!";
+        //     window.alert("Hallo");
+        // }
+    </script>
+</head>
+
+<body>
+
+
+    <h2 class="a1 b2">a1 b2</h2>
+
+    <h2 class="a1 c3">a1 c3</h2>
+
+
+    <h1 id="test">Ich Bin eine &Uuml;berschrift der Ebene 1</h1>
+    <p>Hallo ich bin ein Test und ein Absatz</p>
+
+    <div id="1"></div>
+
+
+    <script>
+        // Deklaration von Variable
+        function rechne() {
+
+            let x = 5.5;
+            let y = 50.5;
+            let a = 55.5;
+            let count = 10
+            let puffer = 0;
+
+            for (var i = 0; i < count; i++) {
+                puffer = i;
+            }
+
+            switch (puffer) {
+                case 9:
+                    a = puffer;
+                    break;
+                default:
+                    break;
+            }
+
+            z = (x + y) * a;
+
+            console.log(z);
+
+            // document.getElementById("test").innerHTML = "John Doe";
+            document.getElementById("test").innerHTML = z + puffer + count + "a<blockquote>test</blockquote>";
+            document.getElementById("test").innerHTML = z + puffer + count + "af\tf\'test\'";
+
+
+        }
+
+        rechne();
+
+        // Auskommentieren wie in Java
+
+
+        // Alternativer Aufgruf wenn Skriptbereich im Style Part geschrieben wurde
+        window.onload = init;
+        //Alternative <body onload="init()">
+
+        //window.print();
+
+
+        function init() {
+            // alert("Seite wird geladen. Ihr Browser versteht JavaScript!");
+        }
+    </script>
+</body>
+
+</html>

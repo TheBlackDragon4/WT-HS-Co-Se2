@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Testseite</title>
+    <style>
+        /*
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        */
+
+        html {
+            font-size: 62.6%;
+        }
+
+        body {
+            color: pink;
+        }
+
+        h2:nth-child(2n) {
+            text-decoration: underline;
+            color: red
+        }
+
+        p:nth-child(3n+2) {
+            text-decoration: overline;
+        }
+
+        h1:nth-of-type(2n) {
+            text-align: center;
+        }
+
+        p:first-letter {
+            /*px ist für Browser die rem nicht unterstützen*/
+            font-size: 28px;
+            font-size: 2.8rem;
+            color: blue;
+        }
+
+        p {
+            font-style: initial;
+            font-weight: 600;
+            color: black;
+            vertical-align: middle;
+
+        }
+
+        .test {
+            position: relative;
+        }
+
+
+        /*
+        :root {
+            background-color:rgb(174, 175, 177);
+        }
+        */
+    </style>
+</head>
+
+<body>
+    <h1>Das ist <mark>Test test</mark><em>ein Test</em></h1>
+
+    <div>
+        <p class="test">GewisterElement 1</p>
+        <h2>GewisterElement 2</h2>
+        <p>GewisterElement 3</p>
+        <h2>GewisterElement 4</h2>
+        <p>GewisterElement 5</p>
+        <h2>GewisterElement 6</h2>
+    </div>
+
+    <!-- Eigentlich so nicht zulässig mit der Überschriftformatierung -->
+    <h1>Das ist <mark>Test test</mark><em>ein Test</em></h1>
+    <h1>Das ist <mark>Test test</mark><em>ein Test</em></h1>
+
+    <form>
+        <select name="Studium">
+            <option value="SG">
+                Studium Generale
+            </option>
+            <option value="KI">
+                Künstliche Intelligenz
+            </option>
+        </select>
+    </form>
+    <br />
+    <form>
+        <fieldset>
+            <legend style="font-family: 'Courier New', Courier, monospace;">Auflistung von Lieblingsdingen</legend>
+            <p>Lieblingsfarbe:&nbsp;<input type="color" name="color" /></p>
+            <p>Datum:&nbsp;<input type="date" name="date" /></p>
+            <p>Anzahl:&nbsp;<input type="range" min="1" max="10" name="range" /></p>
+            <p>E-Mail:&nbsp;<input type="email" name="email" placeholder="test@test.com" /></p>
+        </fieldset>
+        <p><input type="submit" name="submit" value="Daten absenden" /></p>
+    </form>
+</body>
+
+</html>

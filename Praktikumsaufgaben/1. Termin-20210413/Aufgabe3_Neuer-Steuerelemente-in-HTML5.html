@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Formular - Neue Steuerelemente in HTML5</title>
+</head>
+
+<body>
+	<header>
+
+	</header>
+
+	<nav>
+
+	</nav>
+
+	<main>
+		<form action="http://www.webserver.de/verarbeitung.php" method="get">
+			<fieldset>
+				<legend>Information</legend>
+
+				<p>Geburtsdatum: <input type="date" name="gebdatum" /></p>
+				<p>Lieblingsfarbe: <input type="color" name="lieblingsfarbe" /></p>
+				<p>Anzahl (1-10): <input type="range" name="bereich" min="1" max="10" /></p>
+				<p>E-Mail-Adr.: <input type="email" name="mailadr" placeholder="test@test.de" /></p>
+				<p>W&auml;hle Zahl: <input type="text" name="waehlezahl" placeholder="30" />&nbsp;(10er-Schritte)</p>
+				<p>Passwort: <input type="password" name="passwort" placeholder="hnü23!" /></p>
+				<p>Suche nach: <input type="text" name="search" placeholder="Search"></p>
+			</fieldset>
+			<!--Absende Button-->
+			<p><input type="submit" value="Daten absenden" /></p>
+		</form>
+	</main>
+</body>
+
+</html>

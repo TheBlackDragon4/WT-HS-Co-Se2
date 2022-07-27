@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS Test Dokument</title>
+    <!-- Mit diesem * wird verdeutlicht, sollen sich die Werte für alle Elemente ändern -->
+    <style>
+        h1 {
+            text-align: center;
+        }
+        
+        h1,
+        p {
+            border: 1px solid black;
+            background-color: red;
+        }
+
+        header {
+            background-color: aquamarine;
+        }
+
+        nav {
+            background-color: antiquewhite;
+        }
+
+        main {
+            background-color: bisque;
+        }
+
+        aside {
+            background-color: cyan;
+        }
+
+        footer {
+            background-color: darkgoldenrod;
+        }
+
+        #Ueberschrift2 {
+            font-size: 25px;
+            text-decoration: line-through;
+            background-color: aquamarine;
+            border: 1px solid black;
+        }
+
+        table {
+            background-color: green;
+            border: 3px solid black;
+        }
+
+        td {
+            background-color: beige;
+        }
+
+        * {
+            margin: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Hallo, ich bin ein Test und gleichzeitig Überschrift der Ebene 1</h1>
+        <nav>
+            <!--Alternativ kann man hier auch p nutzen-->
+            <p>
+                <a>Startseite</a>
+                <a>Über uns</a>
+            </p>
+            <!--Alternativ kann man hier auch mit Tabellen gemacht -->
+            <table>
+                <tr>
+                    <td>Studium</td>
+                    <td>&Uuml;ber mich</td>
+                    <td><a title="Informationen" href="Aufgabe7_Skript_Block-oder-Webzeitung.html">Informationen</a>
+                    </td>
+                    <td>Vermögensaufbau</td>
+                    <td>investments</td>
+                    <td>Finanzwissen</td>
+                </tr>
+            </table>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <header>
+                <h2 id="Ueberschrift2">Das ist eine Überschrift der zweiten Ebene</h2>
+            </header>
+
+            <article>
+                <h2>Blockbeitrag</h2>
+                <p>testtesttesttest</p>
+                <table>
+                    <tr>
+                        <td><b>Spalte 1</b></td>
+                        <td><b>Spalte 2</b></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Zeile 1</li>
+                                <li>Zeile 2</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Zeile 1</li>
+                                <li>Zeile 2</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </article>
+            <article>
+                <h2>Hier werden Hintergrundfarben getestet</h2>
+                <p>testtesttesttest</p>
+                <table>
+                    <tr>
+                        <td><b>Spalte 1</b></td>
+                        <td><b>Spalte 2</b></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Zeile 1</li>
+                                <li>Zeile 2</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Zeile 1</li>
+                                <li>Zeile 2</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+    </main>
+
+    <aside>
+        <p>Werbung ... </p>
+    </aside>
+
+    <footer>
+        <p>Fu&szlig;zeile</p>
+    </footer>
+
+</body>
+
+</html>

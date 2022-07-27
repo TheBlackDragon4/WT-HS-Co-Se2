@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>DOM - Aufbau Seite per JS</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <style>
+        .wichtig {
+            color: red;
+        }
+
+        .nochWichtiger {
+            font-weight: bold;
+        }
+
+        #absatz {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // Hier steht Ihr JS-Code
+        // Erstellung des Absatzes
+        let bodyElement = document.body;
+        let newParagraph = document.createElement('p');
+        let paragraphContent = document.createTextNode('Absatz') // Inhalt -> Text des Absatzes
+        newParagraph.setAttribute('id', 'absatz')
+
+        // Erstellung der Liste
+        let list = document.createElement('ul');
+        let firstItem = document.createElement('li');
+        let secondItem = document.createElement('li');
+        let thirdItem = document.createElement('li');
+
+        // Befüllung von Kontent
+        let firstItemContent = document.createTextNode('Erstes Listenelement');
+        let secondItemContent = document.createTextNode('Zweites Listenelement');
+        let thirdItemContent = document.createTextNode('');
+
+        // Text Dekoration
+        firstItem.style.textDecoration = 'line-through';
+
+        secondItem.classList.add('wichtig');
+        secondItem.classList.add('nochWichtiger')
+
+        firstItem.appendChild(firstItemContent);
+        secondItem.appendChild(secondItemContent);
+        thirdItem.appendChild(thirdItemContent);
+
+        let listItems = [firstItem, secondItem, thirdItem]
+
+        for (item of listItems) {
+            list.appendChild(item);
+        }
+
+        // Kind Element von Paragraph
+        newParagraph.appendChild(paragraphContent);
+
+        newParagraph.addEventListener('click', achtung, false);
+
+
+        // Ausgabe auf Screen
+        bodyElement.appendChild(newParagraph);
+        bodyElement.appendChild(list);
+
+        function achtung() { this.style.backgroundColor = "yellow"; }
+    </script>
+</body>
+
+</html>

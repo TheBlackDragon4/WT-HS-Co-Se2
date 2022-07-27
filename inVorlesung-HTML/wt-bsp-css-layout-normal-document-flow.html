@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Normal Document Flow</title>
+
+   <style>
+      /* Außen- und Innenabstände für alle Elemente auf Null setzen */
+      /* * { margin: 0; padding: 0; } */
+
+      html {
+         background: black;
+         border: 3px solid white;
+      }
+
+      body {
+         background: lightyellow;
+         border: 3px solid yellow;
+      }
+
+      div {
+         background: salmon;
+         border: 3px solid red;
+      }
+
+      h1,
+      h2 {
+         background: lightgreen;
+         border: 2px solid green;
+         color: green;
+
+         display: inline-block;
+      }
+
+      figure {
+         background: orange;
+         border: 3px dotted red;
+      }
+
+      img {
+         border: 2px solid white;
+      }
+
+      p {
+         border: 2px solid blue;
+         background: white;
+         color: blue;
+      }
+
+      article,
+      footer {
+         background: gainsboro;
+         border: 3px solid gray;
+         color: gray;
+
+         display: inline-block;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- div als Container bzw. Wrapper -->
+   <div>
+      <h1>Normaler Text-/Element-Fluss - Normal Document Flow</h1>
+      <figure>
+         <img src="http://lorempixel.com/200/200/sports" alt="" />
+         <img src="http://lorempixel.com/200/200/sports" alt="" />
+         <img src="http://lorempixel.com/200/200/sports" alt="" />
+         <img src="http://lorempixel.com/200/200/sports" alt="" />
+         <img src="http://lorempixel.com/200/200/sports" alt="" />
+         <img src="http://lorempixel.com/200/200/sports" alt="" />
+      </figure>
+
+      <article>
+
+         <h2> Bild-Galerie</h2>
+
+         <p>Darstellung der Elemente (Rahmen/Hintergrund):<br /> html weiß/schwarz | body gelb/hellgelb | div
+            rot/hellrot | h1 u. h2 grün/hellgrün | img weiß/- | Bild-Container (figure): rot gepunktet/orange | p
+            blau/weiß | article- u. footer grau/hellgrau
+         </p>
+
+         <p>Verändere die Fenstergröße und beobachte was passiert. Beachte auch die STANDARD-ABSTÄNDE.
+         </p>
+
+      </article>
+
+   </div>
+
+   <footer>Fußzeile</footer>
+
+   <pre>
+   Zugehöriger HTML-Code:
+
+   &lt;body&gt;
+   &lt;div&gt;
+      &lt;h1&gt;Normaler Text-/Element-Fluss - Normal Document Flow&lt;/h1&gt;
+      &lt;figure&gt;
+         &lt;img src="http://lorempixel.com/200/200/sports" width="200" alt="" /&gt;
+         ...
+      &lt;/figure&gt;
+
+      &lt;article&gt;
+         &lt;h2&gt; Bild-Galerie&lt;/h2&gt;
+         &lt;p&gt;Darstellung der Elemente (Rahmen/Hintergrund):...
+         &lt;/p&gt;
+         &lt;p&gt;Verändere die Fenstergröße...
+         &lt;/p&gt;
+      &lt;/article&gt;
+
+   &lt;/div&gt;
+
+   &lt;footer&gt;Fußzeile&lt;/footer&gt;
+
+   &lt;/body&gt;
+   </pre>
+
+</body>
+
+</html>

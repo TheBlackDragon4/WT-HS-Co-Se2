@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Realsierung von Ajax Übung 5 (JSON)</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <h1>&Uuml;bersicht Bestellungen anzeigen</h1>
+    <button type="button" onclick="clickOnGO()">GO!</button>
+    <div id="auslesen"></div>
+
+    <script>
+
+        function create() {
+            // Deklaration
+            let elementIDObjekt = document.getElementById("ausgabe");
+            let querySelectorh1 = document.querySelector("h1");
+            let createNewElement = document.createElement("p");
+
+            console.log("test");
+
+            createNewElement.innerHTML = "test";
+            elementIDObjekt.appendChild(createNewElement);
+        }
+
+        function clickOnGO() {
+            let myRequest = new XMLHttpRequest();
+            myRequest.onload = auslesen();
+            myRequest.open('GET', "PurchaseOrders.JSON", true);
+            myRequest.send();
+        }
+
+        function auslesen() {
+
+            let xmlDomObjekt;
+            if (myRequest.status == 200) {
+
+                xmlDomObjekt = myRequest.responseXML;
+
+                // Hier wird der Startknoten gesetzt
+                let startKnoten = xmlDomObjekt.children[0];
+
+                // Alle Kinder des Startknoten müssen nun abgearbeitet werden
+                let child = startKnoten.children;
+
+                // Aus dem HTML wird hier das div geholt
+                let div = document.createElement("div");
+
+                // Hier soll die Variable TEXT für weitere Verwendung erstellt werden
+                let text = "";
+
+                for (let i = 0; i < kinder.length; i++) {
+                    text += kinder[i].attributes[0].value;
+                }
+
+                div.innerHTML = text;
+
+            }
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Boxmodell Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: silver;
+            border: 2px solid pink;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.0rem;
+        }
+
+        #bigbox {
+            background-color: bisque;
+            border: 2px solid red;
+        }
+
+        #box1 {
+            background-color: greenyellow;
+            border: 1px solid black;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        #box1-1 {
+            background-color: lightyellow;
+            border: 1px solid black;
+            margin: 30px;
+            padding: 6px;
+        }
+
+        #box1-1-1 {
+            background-color: lightblue;
+            border: 1px solid black;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /* Relativ */
+        /*
+        #box2 {
+            background-color: white;
+            border: 1px dashed black;
+            /* Sorgt für gestrichelte Linien
+            margin: 6px;
+            padding: 30px;
+
+            position:relative;
+            top: -100px;
+            left: 100px;
+        }
+        */
+
+        /* absolute */
+        /*
+        #box2 {
+            background-color: white;
+            border: 1px dashed black;
+            /* Sorgt für gestrichelte Linien
+            margin: 6px;
+            padding: 30px;
+            width: 100px;
+            height: 100px;
+
+            position: absolute;
+            top: 100px;
+            left: 200px;
+
+        }
+        */
+
+
+        #box2 {
+            background-color: white;
+            border: 1px dashed black;
+            /* Sorgt für gestrichelte Linien*/
+            margin: 6px;
+            padding: 30px;
+            
+            position: fixed;
+            top: 150px;
+            left: 200px;
+        }
+
+        #box2-1,
+        #box2-2 {
+            background-color: yellow;
+            border: 1px solid black;
+            margin: 5px;
+            padding: 4px;
+        }
+
+        #box3 {
+          
+            background-color: bisque;
+            border: 1px solid black;
+            margin: 20px;
+            padding: 50px;
+
+            height: 50%;
+        }
+
+        #box3-1 {
+            background-color: yellow;
+            border: 1px solid black;
+            margin: 20px;
+            padding: 40px;
+
+            float: left;
+        }
+
+        span {
+            background-color: orange;
+            border: 2px solid black;
+            margin: 5px;
+            padding: 20px;
+
+            display: inline-block;
+            /*float: right;*/
+        }
+
+        footer {
+            float: left;
+            margin: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bigbox">
+        <div id="box1">
+            Box1
+            <div id="box1-1">
+                Box 1-1
+                <div id="box1-1-1">
+                    box 1-1-1
+                </div>
+            </div>
+        </div>
+        <div id="box2">
+            Box2
+            <div id="box2-1">
+                Box 2-1
+            </div>
+            <div id="box2-2">
+                Box 2-2
+            </div>
+        </div>
+    </div>
+    <br />
+    <div id="box3">
+        <div id="box3-1">
+            Box 3-1
+        </div>
+        ) Der Aufbau des Studiums ergibt sich aus der Anlage zu dieser Studien- und Prüfungsordnung.
+        (3)1Eine Vertiefungsrichtung ist eine Gruppe von fachlich zusammengehörenden Modulen, in denen ein
+        bestimmtes Fachgebiet vertieft wird. 2Module einer Vertiefungsrichtung werden als fachwissenschaftliche
+        Wahlpflichtmodule nach Maßgabe des Studien- und Prüfungsplans ab dem dritten Studiensemester geführt.
+        3Als Vertiefungsrichtungen werden angeboten:
+        1. Software-Techniken (S)
+        2. Embedded Systems (E)
+        3. Wirtschaftsinforngeboten:
+        1. Softwarelne Vertiefungsrichtungen
+        4Ein Anspruch darauf, dass einzelne Vertiefungsrichtungen durchgeführt werden, besteht nicht. 5Die
+        Prüfungskommission erkennt auf Antrag des Studierenden die Ableistung einer Vertiefungsrichtung nach
+        Satz 3 an, wenn mindestens 40 Leistungspunkte (ECTS) aus einer einzelnen Vertiefungsrichtung
+        nachgewiesen werden. 6Dieser Antrag ist zusammen mit der (ersten) Anmeldung zur Bachelorarbeit zu
+        stellen; Anträge nach diesem Zeitpunkt sind ausgeschlossen (Ausschlussfrist). 7Wird kein Antrag oder ein
+        Antrag nach diesem Zeitpunkt g
+        2. Embedded Systems (E)us einer einzelnen Vertiefungsrichtung
+        nachgewiesen werden. 6Dieser Antrag i
+        Antrag nach diesem Zeitpunkt gestellt oder ist ein
+        Antrag nach diesem Zeitpunkt gestellt oder ist ein
+        Antrag nach diesem Zeitpunkt gestellt oder ist ein
+        Antrag nach diesem Zeitpunkt gestellt oder ist ein
+        Antrag nach diesem Zeitpunkt gestellt oder ist ein
+        Antrag nach diesem <span>Hallo ich bin ein SPAN und werde
+            gefloatetjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjenn mindestens 40 Leistungspunkte (ECTS) aus einer
+            einzelnen Vertiefungsrichtung
+            nachgewiesen werden. 6Dieser Antrag ist zusammen mit der (ersten) Anmeldung zur Bachelorarbeit zu
+            stellen; Anträge nach diesem Zeitpunkt sind ausgeschlossen (Ausschlussfrist). 7Wird kein Antrag oder ein
+            Antrag nach diesem Zeitpunkt gestellt oder ist einahlpflichtmodule nach Maßgabe des Studien- und
+            Prüfungsplans
+            ab dem dritten Studiensemester geführt.
+            3Als Vertiefungsrichtungen werden angeboten:
+            1. Software-Techniken (S)
+            2. Embedded Systems (E)
+            3. Wirtschaftsinformatik (W)
+            4Ein Anspruch darauf, dass einzelne Vertiefungsrichtungen durchgeführt werden, besteht nicht. 5Die
+            Prüfungskommission erkennt auf Antrag des Studierenden die Ableistung einer Vertiefungsrichtung nach
+            Satz 3 an, wenn mindestens 40 Leistungspunk
+            Antrag nach diesem Zeitpunkt gestellt oder ist ein
+            Antrag nach diesem Zeitpunkt gestellt oder ist ein
+            Antrag nach diesem Zeitpunkt gestellt oder ist einhtungen durchgeführt werden, besteht nicht. 5Die
+            Prüfungskommission erkennt auf
+            Afjfjfjfjfjfjfjfjjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjffffffffffffffffffffffffffffffffffffffffffff</span>
+        Zeitpunkt gestellt oder ist ein
+        Antrag nach diesem Zeitpunkt gestellt oder ist ein
+        Antrag nach diesem Zeitpunkt gestellt oder ist ein
+        Antrag nach diesem Zeitpunkt gestellt oder ist ein
+        Antrag nach diesem Zeitpunkt geAbleistung einer Vertiefungsrichtung nach
+        Satz 3 an, wenn mindestens 40 Leistungspunkte (ECTS) aus einer einzelnen Vertiefungsrichtung
+        nachgewiesen werden. 6Dieser Antrag ist zusammen mit der (ersten) Anmeldung zur Bachelorarbeit zu
+        stellen; Anträge nach diesem Zeitpunkt sind ausgeschlossen (Ausschlussfrist). 7Wird kein Antrag oder ein
+        Antrag nach diesem Zeitpunkt gestellt oder ist einahlpflichtmodule nach Maßgabe des Studien- und Prüfungsplans
+        ab dem dritten Studiensemester geführt.
+        3Als Vertiefungsrichtungen werden angeboten:
+        1. Software-Techniken (S)
+        2. Embedded Systems (E)
+        3. Wirtschaftsinformatik (W)
+        4Ein Anspruch darauf, dass einzelne Vertiefungsrichtungen durchgeführt werden, besteht nicht. 5Die
+        Prüfungskommission erkennt auf Antrag des Studierenden die Ableistung einer Vertiefungsrichtung nach
+        Satz 3 an, wenn mindestens 40 Leistungspunk
+        Antrag nach diesem Zeitpunkt gestellt oder ist ein
+        Antrag nach diesem Zeitpunkt gestellt oder ist ein
+        Antrag nach diesem Zeitpunkt gestellt oder ist einhtungen durchgeführt werden, besteht nicht. 5Die
+        Prüfungskommission erkennt auf Antrag des Studierenden die Ableistung einer Vertiefungsrichtung nach
+        Satz 3 an, wenn mindestens 40 Leistungspunkte (ECTS) aus einer einzelnen Vertiefungsrichtung
+        nachgewiesen werden. 6Dieser Antrag ist zusammen mit der (ersten) Anmeldung zur Bachelorarbeit zu
+        stellen; Anträge nach diesem Zeitpunkt sind ausgeschlossen (Ausschlussfrist). 7Wird kein Antrag oder ein
+        Antrag nach diesem Zeitpunkt gestellt oder ist einahlpflichtmodule nach Maßgabe des Studien- und Prüfungsplans
+        ab dem dritten Studiensemester geführt.
+        3Als Vertiefungsrichtungen werden angeboten:
+    </div>
+    <br />
+    <footer>
+        &copy; 2021, Alexander Ultsch
+    </footer>
+
+</body>
+
+</html>

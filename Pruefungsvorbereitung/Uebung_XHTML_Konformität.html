@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <title>Uebung XHTML Konformität</title>
+    <style type="text/css">
+
+    </style>
+    <script type="text/javascript">
+
+    </script>
+</head>
+
+<body>
+    <!-- In XHTML kein HEADER NAV MAIN ASIDE FOOTER zulässig -->
+
+    <!-- http://www.w3big.com/de/html/html-xhtml.html -->
+
+    <h1><p>  h1 p /p /h1  </p></h1>
+    <p><p>Absatzverschachtelungstest</p></p>
+
+    <!-- 1) VERSCHACHTELUNG -->
+    <!-- Fehler -> Verschachtelung nicht nach XHTML - Norm -->
+    <!-- <b> <i> kursiver und fetter Text </b> </i> -->
+    <!-- Richtig -> Verschachtelung -->
+    <b> <i> kursiver und fetter Text </i> </b>
+
+    <!-- 2) SCHLIESSENDE ENDTAGS (TAGS) -->
+    <!-- Fehler -> Schließende EndTags fehlen hier -->
+    <!-- Fehler -> Inneinanderverschachtelung von <p> </p> Tags ist nicht möglich und verboten -->
+    <!-- <p> Das ist ein Absatz
+    <p> Das ist ein weiterer Absatz -->
+    <!-- Richtig -> Schließende Tags sind vorhanden 
+        Formatierungen benötigen ebenfalls eine schließendes Endtag außer das ist nicht vorhanden -->
+    <p> Das ist ein Absatz </p>
+    <p> Das ist ein weiterer Absatz </p>
+    <h1> Ich bin eine Überschrift der Ebene 1</h1>
+    <div> Ich bin ein Abschnitt und nehme mir was ich brauche</div>
+    <a href="" id="asfaf"> Ich bin ein Verweis (Hyperlink) und habe auch einen richtigen Endtag </a>
+    <ol>
+        <li>Ich bin eine geordnete Liste und selbst ich habe oder muss Endtags haben</li>
+    </ol>
+    <ul>
+        <li>Ich bin eine ungeordnete Liste und ich brauche ebenfalls einen Endtag sowphl im li als auch ul
+            HTML - Element</li>
+    </ul>
+    <dl>
+        <dt>Zu beschreiben</dt>
+        <dd>Ich bin eine beschreibende Liste und brauche auf jeden Fall EndTags</dd>
+    </dl>
+    <table>
+        <caption>Tabellenüberschrift</caption>
+        <tr>
+            <td>Ich bin eine Tabellenelement</td>
+            <td>Ich ein weiteres</td>
+        </tr>
+        <tr>
+            <td>Ich ebenfalls in der nächsten Zeile TESTTESTSTST</td>
+            <td>Ditto nur in der nächsten Spalte</td>
+        </tr>
+    </table>
+
+    <!-- 3) Leere Elemente müssen einen Schließenden Tag haben-->
+    <!-- Fehler -> Schließende Tags sind nicht vorhanden -->
+    <br>
+    <hr> <img src="happy.gif">
+    <hr noshade="noshade">
+    <!-- ist zwar Syntaktisch in HTML korrekt bei Syntax in XHTML fehlerhaft -->
+    <!-- Richtig -> Schließende Tags sind vorhanden -->
+    <br />
+    <hr /> <img src="happy.gif" alt="Happy Face" />
+
+    <!-- 4) XHTML - Elemente müssen klein geschrieben werden -->
+    <!-- Fehler -> Da XHTML - Elemente groß geschrieben sind -->
+    <P> Ich bin ein falscher Absatz </P>
+    <!-- Richtig -> XHTML - Element ist klein geschrieben -->
+    <p> Ich bin ein falscher Absatz </p>
+
+    <!-- 5) -->
+
+    <p><button > asfjöaljf </button></p> 
+
+    <header>
+        afafa
+    </header>
+
+    <!-- 6) -->
+
+    <!-- 7) -->
+
+    <!-- 8) -->
+
+    <!-- 9) -->
+
+    <!-- 10) -->
+
+    <!-- 11) -->
+
+    <!-- 12) -->
+
+    <!-- 13) -->
+
+    <!-- 14) -->
+
+    <!-- 15) -->
+
+    <!-- 16) -->
+
+    <!-- 17) -->
+
+    <!-- 18) -->
+
+    <!-- 19) -->
+
+    <!-- 20) -->
+
+
+</body>
+
+</html>

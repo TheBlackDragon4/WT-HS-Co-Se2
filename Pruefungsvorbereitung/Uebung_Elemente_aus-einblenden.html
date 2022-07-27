@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Übung Elemente ein und Ausblenden</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Hier werden die Absätze p ein und ausgeblendet</h1>
+
+    <p>Erster Paragraph</p>
+    <p id="ausblenden">Zweiter Paragraph</p>
+    <p>Dritter Paragraph</p>
+
+    <hr noshade />
+
+    
+    <div id="anordnung"><input type="button" onclick="unsichtbar()" value="unsichtbar" /></div>
+    <div id="anordnung"><input type="button" onclick="sichtbar()" value="sichtbar" /></div>
+
+    <div id="anordnung"><input type="button" onclick="unsichtbar1()" value="unsichtbar1" /></div>
+
+    <script>
+
+        function unsichtbar() {
+            var pars = document.getElementsByTagName("p");
+            for (var i = 0; i < pars.length; i++) {
+                // pars[i].style.visibility = "hidden";
+                // Wenn kein Platz mehr eingenommen werden soll:
+                pars[i].style.display = "none";
+            }
+        }
+
+        function sichtbar() {
+            var pars = document.getElementsByTagName("p");
+            for (var i = 0; i < pars.length; i++) {
+                // pars[i].style.visibility = "visible";
+                // Wenn kein Platz mehr eingenommen werden soll:
+                pars[i].style.display = "block";
+            }
+        }
+
+        function unsichtbar1() {
+            var pars = document.getElementById("ausblenden");
+            pars.style.display = "none";
+        }        
+
+    </script>
+
+</body>
+
+</html>

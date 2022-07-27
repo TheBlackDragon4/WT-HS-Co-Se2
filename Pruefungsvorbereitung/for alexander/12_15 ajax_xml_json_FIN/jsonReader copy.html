@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <title></title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="stylesheet" type="text/css" href="HolyGrid.css" /> -->
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0px;
+      padding: 0px 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="altesElement">&Uuml;bersicht Bestellung anzeigen</h1>
+  <button type="button" onclick="ButGoClicked()">Go!</button>
+
+  <script>
+
+    // let bestellungen = document.createElement("div");
+    let newElement;
+    let bestellungen;
+    let jsonChildren;
+    let txt = "";
+    function ButGoClicked()
+    {
+      newElement = document.createElement("p");
+
+      let anotherRequest = new XMLHttpRequest();
+      anotherRequest.onload = function ()
+      {
+        if (this.status == 200)
+        {
+          bestellungen = this.responseText;
+          inXML();
+        }
+      }
+      anotherRequest.open("GET", "PurchaseOrders.json", true);
+      anotherRequest.send();
+
+    }
+
+    function inXML()
+    {
+      const objectJ = JSON.parse(bestellungen);
+      jsonChildren = objectJ.PurchaseOrders[0]["PurchaseOrder"];
+      for (let i = 0; i < jsonChildren.length; i++)
+      {
+        txt += "PurchaseOrderNumber: " + jsonChildren[i].PurchaseOrderNumber + "<br/>";
+        txt += "OrderDate: " + jsonChildren[i].OrderDate + "<br/>";
+
+        let jsonGrandchildren = objectJ.PurchaseOrders[0]["PurchaseOrder"][i]["Address"];
+        console.log(jsonGrandchildren[0]);
+        txt += " Address:<br/>";
+        for (let j = 0; j < jsonGrandchildren.length; j++)
+        {
+          txt += "<ul>"
+          txt += "<li>Type: " + jsonGrandchildren[j].Type + "</li>";
+          txt += "<li>Name: " + jsonGrandchildren[j].Name + "</li>";
+          txt += "<li>Street: " + jsonGrandchildren[j].Street + "</li>";
+          txt += "<li>City: " + jsonGrandchildren[j].City + "</li>";
+          txt += "<li>State: " + jsonGrandchildren[j].State + "</li>";
+          txt += "<li>Zip: " + jsonGrandchildren[j].Zip + "</li>";
+          txt += "<li>Country: " + jsonGrandchildren[j].Country + "</li>";
+          txt += "</ul><br/>";
+        }
+      }
+
+      newElement.innerHTML = txt;
+      document.querySelector("h1").appendChild(newElement);
+      console.log("bka");
+
+    }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="eu">
+
+<head>
+    <meta charset="utf-8">
+    <title>Holy Grail - Problem</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style-type:none;
+        }
+
+        #container {
+            border: 2px solid green;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            /*width: 500px;*/
+            min-height: 100vh;
+            /*height: 100vh;*/
+        }
+
+        #cotainerMenuContentAds {
+            border: 2px solid red;
+            flex: 1 1 auto;
+            overflow: auto;
+
+            display: flex;
+            flex-direction: row;
+            /*flex-basis: auto;*/
+        }
+
+        .headerfooter {
+            border: 1px solid black;
+            height: 10vh;
+        }
+
+        .menuads {
+            border: 1px solid black;
+            flex: 1 0 100px
+        }
+
+        .content {
+            border: 1px solid black;
+        }
+
+        header {
+            background-color: aqua;
+        }
+
+        nav {
+            background-color: darkorchid;
+        }
+
+        main {
+            background-color: pink;
+        }
+
+        aside {
+            background-color: darkorchid;
+        }
+
+        footer {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <header class="headerfooter">
+            HEADER
+        </header>
+        <div id="cotainerMenuContentAds">
+            <nav class="menuads">
+                <ul>
+                    <li>MENU</li>
+                    <li>ITEM 1</li>
+                    <li>ITEM 2</li>
+                    <li>ITEM 3</li>
+                    <li>ITEM 4</li>
+                    <li>ITEM 5</li>
+                </ul>
+            </nav>
+            <main class="content">
+
+                CONTENT 
+                <br><br>
+                This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves
+                as a proportion. It dictates what amount of the available space inside the flex container the item
+                should take up.
+                <br><br>
+                If all items have flex-grow set to 1, the remaining space in the container will be distributed equally
+                to all children. If one of the children has a value of 2, the remaining space would take up twice as
+                much space as the others (or it will try to, at least).
+                <br><br>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
+                ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                <br><br>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
+                ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                <br><br>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
+                ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+            </main>
+            <aside class="menuads">
+                <ul>
+                    <li>AD</li>
+                    <li>AD</li>
+                </ul>
+            </aside>
+        </div>
+        <footer class="headerfooter">
+
+            FOOTER
+
+        </footer>
+    </div>
+</body>
+
+</html>

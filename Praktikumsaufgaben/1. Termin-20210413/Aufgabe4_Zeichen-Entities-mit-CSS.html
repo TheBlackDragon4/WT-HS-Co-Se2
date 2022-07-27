@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Aufgabe 4 Zeichen-Entities (Escape-Sequenzen), Absatz, Listen, Bild/Hyperlinl</title>
+	<style>
+		h1 {
+			font-size: 30pt;
+		}
+
+		h2 {
+			font-size: 20pt;
+		}
+
+		section {
+			font-size: 10pt;
+		}
+
+		img {
+			width: 42px;
+			height: 42px;
+			border: 1px solid black;
+		}
+
+		span {
+			color: red;
+		}
+		
+	</style>
+</head>
+
+<body>
+	<article>
+		<h1>HTML-Tutorial</h1>
+		<section>
+			<header>
+				<h2>Abs&auml;tze</h2>
+			</header>
+			<ul style="list-style: square;">
+				<li>Ein Absatz kann keine Block-Elemente beinhaltenn, also kein anderen Abs&auml;tze!</li>
+				<li><span>=> verboten: </span>&lt;p&gt;Geschatelte&lt;p&gt;Abs&auml;tze&lt;/p&gt;&lt;p&gt;</li>
+			</ul>
+		</section>
+		<section>
+			<header>
+				<h2>Listen</h2>
+			</header>
+			<ul style="list-style: square;">
+				<li>Ebene 1
+					<ul style="list-style: circle;">
+						<li>Ebene 2</li>
+						<li>Ebene 2
+							<ul style="list-style:none">
+								<li>Ebene 3 (ohne Aufz&auml;hlungszeichen)</li>
+								<li>Ebene 3</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>Ebene 1</li>
+			</ul>
+		</section>
+		<section>
+			<header>
+				<h2>Bilder</h2>
+			</header>
+			<p>Wird das Bild angeklickt, wird https://www.hs-coburg.de/ geladen:</p>
+			<div>
+				<a href="https://www.hs-coburg.de/"><img src="/Praktikumsaufgaben/Bilder/smile.gif"
+						alt="Smily Bild" title="Klick mich" /></a>
+			</div>
+		</section>
+	</article>
+</body>
+
+</html>

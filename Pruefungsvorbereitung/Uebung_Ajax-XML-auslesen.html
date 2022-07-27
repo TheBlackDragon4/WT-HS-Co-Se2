@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Übung Auslesen von XML - Datei</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" type="text/css" href="HolyGrid.css" /> -->
+    <!-- <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+    </style> -->
+</head>
+
+<body>
+    <h1 id="altesElement">&Uuml;bersicht Bestellung anzeigen</h1>
+    <button type="button" onclick="ButGoClicked()">Go!</button>
+
+    <script>
+
+        // let bestellungen = document.createElement("div");
+        let newElement;
+        let bestellungen;
+        let xmlChildren;
+        let txt = "";
+
+        function ButGoClicked() {
+            newElement = document.createElement("p");
+
+            let anotherRequest = new XMLHttpRequest();
+            anotherRequest.onload = function () {
+                if (this.status == 200) {
+                    // document.getElementById("altesElement").innerHTML = this.responseText;
+                    bestellungen = this.responseXML;
+                    inXML();
+                }
+            }
+            anotherRequest.open("GET", "PurchaseOrders.XML", true);
+            anotherRequest.send();
+        }
+
+        function inXML() {
+            xmlChildren = bestellungen.getElementsByTagName("PurchaseOrder");
+
+            for (let i = 0; i < xmlChildren.length; i++) {
+                for (let l = 0; l < xmlChildren[i].attributes.length; l++) {
+                    txt += xmlChildren[i].attributes[l].localName + " " + xmlChildren[i].attributes[l].nodeValue + " ";
+                }
+                txt += "<br/>";
+                // txt += "Bestellung " + xmlChildren[i].getAttribute("PurchaseOrderNumber");
+                // txt += " vom " + xmlChildren[i].getAttribute("OrderDate") + "<br/>";
+            }
+            // newElement.appendChild(document.createTextNode(txt));
+            newElement.innerHTML = txt;
+            document.querySelector("h1").appendChild(newElement);
+        }
+
+    </script>
+</body>
+
+</html>

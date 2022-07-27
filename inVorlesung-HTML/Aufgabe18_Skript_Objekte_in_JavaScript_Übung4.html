@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Objekte in JavaSkript Übung 4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script>
+
+        let person = {
+            name: ['Alexander', 'Ultsch'],
+            alter: 26,
+            geschlecht: 'M',
+            hobbys: ['Finanzen', 'IT - Sicherheit'],
+
+            info: function () {
+                window.alert(this.name[0] + this.name[1] + 'ist' + this.alter + 'Jahre alt. Er mag'
+                    + this.hobbys[0] + 'und' + this.hobbys[1] + '.');
+            }
+
+        }
+
+        innerHTML = person.info();
+
+    </script>
+</body>
+
+</html>

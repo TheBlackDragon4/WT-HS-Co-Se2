@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <title></title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="stylesheet" type="text/css" href="HolyGrid.css" /> -->
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0px;
+      padding: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="altesElement">&Uuml;bersicht Bestellung anzeigen</h1>
+  <button type="button" onclick="ButGoClicked()">Go!</button>
+
+  <script>
+
+    // let bestellungen = document.createElement("div");
+    let myElement;
+    let bestellungen;
+    let childrenX;
+    let txt = "";
+    function ButGoClicked()
+    {
+      myElement = document.createElement("p");
+
+      let anotherRequest = new XMLHttpRequest();
+      anotherRequest.onload = function ()
+      {
+        if (this.status == 200)
+        {
+          // document.getElementById("altesElement").innerHTML = this.responseText;
+          bestellungen = this.responseXML;
+          inXML();
+        }
+      }
+      anotherRequest.open("GET", "Name.xml", true);
+      anotherRequest.send();
+    }
+
+    function inXML()    {
+      childrenX = bestellungen.getElementsByTagName("Company");
+      for (let i = 0; i < childrenX.length; i++){
+        for (let a = 0; a < childrenX[i].attributes.length; a++){//die Attribute der Tags "Company" auslesen
+           txt += "<br/>"+childrenX[i].attributes[a].localName + " " + childrenX[i].attributes[a].nodeValue;
+        }    // weiter mit --> das eine Tag von Company auslesen
+        let grandchildrenX = childrenX[i].getElementsByTagName("Squad");
+        for (let m = 0; m < grandchildrenX.length; m++){//Attribute von Squad auslesen
+          txt += "<br/>Squad: Type = " + grandchildrenX[m].attributes[0].nodeValue;
+          for (let n = 0; n < grandchildrenX[m].children.length; n++){ //die untergeordneten Tags von Squad (ohne evtl. Atribute) auslesen
+            txt += "<br/>" + grandchildrenX[m].children[n].localName + grandchildrenX[m].children[n].textContent;
+          }//"Name" + "Force"
+        }//"Squad"
+        txt += "<br/>";
+      }
+      //   alt:myElement.appendChild(document.createTextNode(txt));
+      myElement.innerHTML = txt;
+      myElement.setAttribute("class", "wichtig")
+      myElement.setAttribute("class", myElement.getAttribute("class") + " nochwichtiger");
+      // myElement.setAttribute("style", " color:red")
+      document.querySelector("h1").appendChild(myElement);
+      // document.querySelectorAll(p); --> liefert ein Array dieser Elemente zurück
+    }
+
+  </script>
+</body>
+
+</html>

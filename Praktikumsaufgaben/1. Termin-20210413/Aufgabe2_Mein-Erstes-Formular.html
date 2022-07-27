@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <title>Mein erstes Formular</title>
+</head>
+
+<body>
+    <form action="http://www.webserver.de/verarbeitung.php" method="get">
+        <h1>Mein erstes Formular</h1>
+        <h2>Umfrage zur Veranstaltung <br />"Webtechnology"</h2>
+
+			<!--Einfache Eingabe der Personennamen-->
+            <p>Vorname: <input name="vorname" type="text" value="Dein Vorname" /></p>
+            <p>Nachname: <input name="nachname" type="text" value="Dein Nachname" /></p>
+            
+			<!--In welchem Semester ist die Person-->
+			<p>Semester: 
+                <input type="radio" name="semester" value="1" />1 
+                <input type="radio" name="semester" value="2" />2 
+                <input type="radio" name="semester" value="3" />3 
+                <input type="radio" name="semester" value="4" />4
+            </p>
+			
+			<!--Aktivitäten nach der Vorlesung-->
+            <p>Aktivit&auml;ten außerhalb der Vorlesung:</p>
+			<p>
+				<input type="checkbox" name="aktivitaeten" value="taeglicher Blick ins Skript" /> t&auml;glicher Blick ins Skript
+				<input type="checkbox" name="aktivitaeten" value="2 Uebungsaufgaben pro Woche lösen" /> 2 &Uuml;bungsaufgaben pro Woche l&ouml;sen
+				<input type="checkbox" name="aktivitaeten" value="Mitschrieb ueberarbeiten" /> Mitschrieb &uuml;berarbeiten
+			</p>
+			
+			<!--Texteingabe-->
+			<p>Was hat Dir bisher am besten gefallen?</p>
+			<p>
+				<textarea name="kommentar" rows="5" cols="40" placeholder="Also..."></textarea>
+			</p>
+			<!--Absende Button-->
+            <p><input type="submit" value="OK" /></p>
+    </form>
+</body>
+
+</html>

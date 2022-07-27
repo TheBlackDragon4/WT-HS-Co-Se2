@@ -1,0 +1,113 @@
+
+.content{
+  display: none;
+}
+
+.skill > h2:hover{
+  cursor: pointer;
+}
+
+
+.line{
+  background-color: #eaebeb;
+  margin-top: 0;
+  height: 2px;
+}
+
+.web ul :last-child{
+  margin-bottom: 24px;
+}
+.web ul > li{
+    float: left;
+    list-style-type: none;
+    margin-right: 20px;
+}
+.web ul > li > a, .web ul > li > strong{
+    margin-bottom: 20px;
+}
+
+.sw ul > li{
+  list-style-type: none;
+}
+.sw ul > li > p, .sw ul > li > strong{
+  margin-top: 0;
+}
+
+.web {
+  grid-area: web;
+}
+
+.sw {
+  grid-area: sw;
+}
+
+.gd {
+  grid-area: gd;
+}
+
+.lang {
+  grid-area: lang;
+}
+
+.else {
+  grid-area: else;
+}
+
+.blog {
+  grid-area: blog;
+}
+
+.wrapper {
+  margin: 1em;
+  /* margin-left: 1em; */
+  /* width: 90%; */
+
+  display: grid;
+  grid-gap: 1em;
+  grid-template-areas:
+    "web"
+    "sw"
+    "gd"
+    "lang"
+    "else"
+    "blog";
+}
+
+@media only screen and (min-width: 500px) {
+  .wrapper {
+    grid-template-columns: auto;
+    grid-template-areas:
+      "web"
+      "sw"
+      "gd"
+      "lang"
+      "else"
+      "blog";
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .wrapper {
+    grid-gap: 20px;
+    grid-template-columns: auto 35%;
+    grid-template-areas:
+      "web  blog"
+      "sw blog"
+      "gd blog"
+      "lang blog"
+      "else blog";
+  }
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 150%;
+}
+
+.blog {
+  background-color: #ccc;
+  color: #444;
+}

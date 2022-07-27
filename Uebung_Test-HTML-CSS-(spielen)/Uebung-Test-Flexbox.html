@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Flexbox Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .container {
+            padding: 5px;
+            display: flex;
+            background-color: silver;
+            overflow: scroll;
+            flex-direction:row;
+            flex: auto;
+        }
+
+        p {
+            border: 1px solid black;
+        }
+
+        p>span {
+            background-color: yellow;
+        }
+
+
+        #box1 {
+            flex: 1 1 auto;
+            order: 1;
+        }
+
+        #box2 {
+            flex: 4 0 200px;
+            background-color: rgb(131, 202, 255);
+            order: 2;
+        }
+
+        #box3 {
+            flex: auto;
+            order: -1;
+        }
+
+        #box4 {
+            width: 100px;
+            overflow: scroll;
+            flex: 3 0 auto;
+            order: 4;
+        }
+
+        #box5 {
+            flex: 1 0 0;
+            order: 5;
+        }
+
+        #box6 {
+            flex: 1 0 0;
+            order: 6;
+        }
+
+        #box7 {
+            flex: 1 0 0;
+            order: 7;
+        }
+
+        #box8 {
+            flex: 6 0 auto;
+            order: 1;
+        }
+
+        #box9 {
+            flex: 1 0 0;
+            order: 9;
+        }
+
+        #box10 {
+            flex: 1 0 0;
+            order: 10;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <p id="box1">
+            <span>test</span>
+            Box 1
+        </p>
+        <p id="box2">
+            Box 2
+        </p>
+        <p id="box3">
+            Box 3
+        </p>
+        <p id="box4">
+            Box 4
+            Hallo ich bin ein flex-shrink Test und hoffe auf einen Scrollbalken beim verändern der Browserfenstergröße
+        </p>
+        <p id="box5">
+            Box 5
+        </p>
+        <p id="box6">
+            Box 6
+        </p>
+        <p id="box7">
+            Box 7
+        </p>
+        <p id="box8">
+            Box 8
+        </p>
+        <p id="box9">
+            Box 9
+        </p>
+        <p id="box10">
+            Box 10
+        </p>
+
+    </div>
+
+
+
+</body>
+
+</html>

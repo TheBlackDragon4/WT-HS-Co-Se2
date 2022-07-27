@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zähler</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+
+    </style>
+    <script>
+        let countW = 0;
+        let countB1 = 0;
+        let countB2 = 0;
+
+        function oneTimeButtonB1Clicked() {
+            countB1++;
+            countB2 += 1;
+            document.getElementById("I1").value = countB1;
+            document.getElementById("I3").value = countW;
+        }
+
+        function oneTimeButtonB2Clicked() {
+            countB2++;
+            countW;
+            document.getElementById("I2").value = countB2;
+            document.getElementById("I3").value = countW;
+        }
+
+        function resetFunction() {
+            countB1 = 0;
+            countB2 = 0;
+            countW = 0;
+            document.getElementById("I1").value = countB1;
+            document.getElementById("I2").value = countB2;
+            document.getElementById("I3").value = countW;
+        }
+    </script>
+</head>
+
+<body>
+    <form action="www.webserver.de/kontakt.php" id="Form1" name="Form1">
+        <h1>Z&auml;hle die Anzahl der Klicks pro Button</h1>
+        <input name="B1Ctrl" onclick="oneTimeButtonB1Clicked()" type="button" value="Button B1" />
+        <input name="B2Ctrl" onclick="oneTimeButtonB2Clicked()" type="button" value="Button B2" />
+        <p>B1 gedr&uuml;ckt (Gewicht = 1):
+            <input id="I1" name="B1CountCrtl" readonly="readonly" type="text" value="0" />
+        </p>
+        <p>B2 gedr&uuml;ckt (Gewicht = 2):
+            <input id="I2" name="B2CountCrtl" readonly="readonly" type="text" value="0" />
+        </p>
+        <p>Gewichteter Wert:
+            <input id="I3" name="weightedCountCtrl" readonly="readonly" type="text" value="0" />
+        </p>
+        <p>
+            <input name="resetCtrl" onclick="resetFunction()" type="button" value="0" />
+        </p>
+        <p>
+            <input type="reset" value="R&uuml;cksetzen (input type=&quot;resset&quot;)">
+        </p>
+    </form>
+</body>
+
+</html>
